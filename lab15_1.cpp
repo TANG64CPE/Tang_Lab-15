@@ -3,8 +3,19 @@ using namespace std;
 
 template <typename T>
 void insertionSort(T d[],int N){
-
-}
+	int i, key, j; 
+    for (i = 1; i < N; i++)
+    { 
+        key = arr[i]; 
+        j = i - 1; 
+        while (j >= 0 && arr[j] > key)
+        { 
+            arr[j + 1] = arr[j]; 
+            j = j - 1; 
+        } 
+        arr[j + 1] = key; 
+    } 
+} 
 
 int main(){
 	int a[10] = {12,25,30,44,2,0,4,7,55,25};
